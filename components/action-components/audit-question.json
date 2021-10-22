@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_action_components_audit_questions",
+  "info": {
+    "name": "audit-question",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "answer": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "isos",
+  "info": {
+    "name": "ISO"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ui_code": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "iso-components.section"
+    }
+  }
+}

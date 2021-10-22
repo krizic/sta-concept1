@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_iso_component_subsections",
+  "info": {
+    "name": "Subsection",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "section_number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "annex": {
+      "type": "component",
+      "repeatable": true,
+      "component": "iso-components.annex"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "actions",
+  "info": {
+    "name": "Action",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "stamp": {
+      "type": "time"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "guidelines",
+        "work_instruction",
+        "audit_question",
+        "proof_documents"
+      ]
+    },
+    "audit_question": {
+      "type": "component",
+      "repeatable": false,
+      "component": "action-components.audit-question"
+    },
+    "predefined_question": {
+      "type": "component",
+      "repeatable": true,
+      "component": "action-components.predefined-question"
+    }
+  }
+}

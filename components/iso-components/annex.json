@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_iso_component_annexes",
+  "info": {
+    "name": "Annex",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "section_number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "actions": {
+      "collection": "action"
+    },
+    "audit_question": {
+      "type": "component",
+      "repeatable": false,
+      "component": "action-components.audit-question"
+    },
+    "predefined_question": {
+      "type": "component",
+      "repeatable": false,
+      "component": "action-components.predefined-question"
+    }
+  }
+}

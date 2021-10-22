@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_iso_component_sections",
+  "info": {
+    "name": "section",
+    "icon": "bars",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "section_number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "subsection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "iso-components.subsection"
+    }
+  }
+}

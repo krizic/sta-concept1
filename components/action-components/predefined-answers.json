@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_action_components_predefined_answers",
+  "info": {
+    "name": "predefined-answers",
+    "icon": "comment-dots"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}
