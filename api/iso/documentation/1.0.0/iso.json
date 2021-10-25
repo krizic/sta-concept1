@@ -548,6 +548,64 @@
                 "description": {
                   "type": "string"
                 },
+                "tag": {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "predefined_tag": {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "tag_name": {
+                          "type": "string"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "assigned_tags": {
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "tag_name": {
+                            "type": "string"
+                          },
+                          "published_at": {
+                            "type": "string"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "subsection": {
                   "type": "array",
                   "items": {
@@ -564,6 +622,64 @@
                       },
                       "description": {
                         "type": "string"
+                      },
+                      "tag": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "predefined_tag": {
+                            "required": [
+                              "id"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "tag_name": {
+                                "type": "string"
+                              },
+                              "published_at": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "assigned_tags": {
+                            "type": "array",
+                            "items": {
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "tag_name": {
+                                  "type": "string"
+                                },
+                                "published_at": {
+                                  "type": "string"
+                                },
+                                "created_by": {
+                                  "type": "string"
+                                },
+                                "updated_by": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
                       },
                       "annex": {
                         "type": "array",
@@ -582,9 +698,68 @@
                             "description": {
                               "type": "string"
                             },
-                            "actions": {
+                            "tag": {
+                              "type": "object",
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "predefined_tag": {
+                                  "required": [
+                                    "id"
+                                  ],
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "tag_name": {
+                                      "type": "string"
+                                    },
+                                    "published_at": {
+                                      "type": "string"
+                                    },
+                                    "created_by": {
+                                      "type": "string"
+                                    },
+                                    "updated_by": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "assigned_tags": {
+                                  "type": "array",
+                                  "items": {
+                                    "required": [
+                                      "id"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "tag_name": {
+                                        "type": "string"
+                                      },
+                                      "published_at": {
+                                        "type": "string"
+                                      },
+                                      "created_by": {
+                                        "type": "string"
+                                      },
+                                      "updated_by": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "action_structure": {
                               "type": "array",
                               "items": {
+                                "type": "object",
                                 "required": [
                                   "id"
                                 ],
@@ -592,68 +767,7 @@
                                   "id": {
                                     "type": "string"
                                   },
-                                  "stamp": {
-                                    "type": "string"
-                                  },
-                                  "type": {
-                                    "type": "string",
-                                    "enum": [
-                                      "guidelines",
-                                      "work_instruction",
-                                      "audit_question",
-                                      "proof_documents"
-                                    ]
-                                  },
-                                  "audit_question": {
-                                    "type": "component"
-                                  },
                                   "predefined_question": {
-                                    "type": "component"
-                                  },
-                                  "published_at": {
-                                    "type": "string"
-                                  },
-                                  "created_by": {
-                                    "type": "string"
-                                  },
-                                  "updated_by": {
-                                    "type": "string"
-                                  }
-                                }
-                              }
-                            },
-                            "audit_question": {
-                              "type": "object",
-                              "required": [
-                                "id"
-                              ],
-                              "properties": {
-                                "id": {
-                                  "type": "string"
-                                },
-                                "question": {
-                                  "type": "string"
-                                },
-                                "answer": {
-                                  "type": "string"
-                                }
-                              }
-                            },
-                            "predefined_question": {
-                              "type": "object",
-                              "required": [
-                                "id"
-                              ],
-                              "properties": {
-                                "id": {
-                                  "type": "string"
-                                },
-                                "question": {
-                                  "type": "string"
-                                },
-                                "predefined_answers": {
-                                  "type": "array",
-                                  "items": {
                                     "type": "object",
                                     "required": [
                                       "id"
@@ -662,7 +776,87 @@
                                       "id": {
                                         "type": "string"
                                       },
-                                      "text": {
+                                      "question": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  },
+                                  "predefined_answer": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "required": [
+                                        "id"
+                                      ],
+                                      "properties": {
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "action_type": {
+                                    "type": "object",
+                                    "required": [
+                                      "id"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "action_type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "Guideline",
+                                          "WorkInstruction",
+                                          "AuditQuestion",
+                                          "ProofDocument"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "action": {
+                                    "required": [
+                                      "id"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "stamp": {
+                                        "type": "string"
+                                      },
+                                      "type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "guidelines",
+                                          "work_instruction",
+                                          "audit_question",
+                                          "proof_documents"
+                                        ]
+                                      },
+                                      "audit_question": {
+                                        "type": "string"
+                                      },
+                                      "audit_response": {
+                                        "type": "string"
+                                      },
+                                      "selected_answer_id": {
+                                        "type": "integer"
+                                      },
+                                      "alternative_answer": {
+                                        "type": "string"
+                                      },
+                                      "published_at": {
+                                        "type": "string"
+                                      },
+                                      "created_by": {
+                                        "type": "string"
+                                      },
+                                      "updated_by": {
                                         "type": "string"
                                       }
                                     }
@@ -713,6 +907,64 @@
                 "description": {
                   "type": "string"
                 },
+                "tag": {
+                  "type": "object",
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "predefined_tag": {
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "tag_name": {
+                          "type": "string"
+                        },
+                        "published_at": {
+                          "type": "string"
+                        },
+                        "created_by": {
+                          "type": "string"
+                        },
+                        "updated_by": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "assigned_tags": {
+                      "type": "array",
+                      "items": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "tag_name": {
+                            "type": "string"
+                          },
+                          "published_at": {
+                            "type": "string"
+                          },
+                          "created_by": {
+                            "type": "string"
+                          },
+                          "updated_by": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "subsection": {
                   "type": "array",
                   "items": {
@@ -729,6 +981,64 @@
                       },
                       "description": {
                         "type": "string"
+                      },
+                      "tag": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "predefined_tag": {
+                            "required": [
+                              "id"
+                            ],
+                            "properties": {
+                              "id": {
+                                "type": "string"
+                              },
+                              "tag_name": {
+                                "type": "string"
+                              },
+                              "published_at": {
+                                "type": "string"
+                              },
+                              "created_by": {
+                                "type": "string"
+                              },
+                              "updated_by": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "assigned_tags": {
+                            "type": "array",
+                            "items": {
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "tag_name": {
+                                  "type": "string"
+                                },
+                                "published_at": {
+                                  "type": "string"
+                                },
+                                "created_by": {
+                                  "type": "string"
+                                },
+                                "updated_by": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
                       },
                       "annex": {
                         "type": "array",
@@ -747,9 +1057,68 @@
                             "description": {
                               "type": "string"
                             },
-                            "actions": {
+                            "tag": {
+                              "type": "object",
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "predefined_tag": {
+                                  "required": [
+                                    "id"
+                                  ],
+                                  "properties": {
+                                    "id": {
+                                      "type": "string"
+                                    },
+                                    "tag_name": {
+                                      "type": "string"
+                                    },
+                                    "published_at": {
+                                      "type": "string"
+                                    },
+                                    "created_by": {
+                                      "type": "string"
+                                    },
+                                    "updated_by": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "assigned_tags": {
+                                  "type": "array",
+                                  "items": {
+                                    "required": [
+                                      "id"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "tag_name": {
+                                        "type": "string"
+                                      },
+                                      "published_at": {
+                                        "type": "string"
+                                      },
+                                      "created_by": {
+                                        "type": "string"
+                                      },
+                                      "updated_by": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "action_structure": {
                               "type": "array",
                               "items": {
+                                "type": "object",
                                 "required": [
                                   "id"
                                 ],
@@ -757,68 +1126,7 @@
                                   "id": {
                                     "type": "string"
                                   },
-                                  "stamp": {
-                                    "type": "string"
-                                  },
-                                  "type": {
-                                    "type": "string",
-                                    "enum": [
-                                      "guidelines",
-                                      "work_instruction",
-                                      "audit_question",
-                                      "proof_documents"
-                                    ]
-                                  },
-                                  "audit_question": {
-                                    "type": "component"
-                                  },
                                   "predefined_question": {
-                                    "type": "component"
-                                  },
-                                  "published_at": {
-                                    "type": "string"
-                                  },
-                                  "created_by": {
-                                    "type": "string"
-                                  },
-                                  "updated_by": {
-                                    "type": "string"
-                                  }
-                                }
-                              }
-                            },
-                            "audit_question": {
-                              "type": "object",
-                              "required": [
-                                "id"
-                              ],
-                              "properties": {
-                                "id": {
-                                  "type": "string"
-                                },
-                                "question": {
-                                  "type": "string"
-                                },
-                                "answer": {
-                                  "type": "string"
-                                }
-                              }
-                            },
-                            "predefined_question": {
-                              "type": "object",
-                              "required": [
-                                "id"
-                              ],
-                              "properties": {
-                                "id": {
-                                  "type": "string"
-                                },
-                                "question": {
-                                  "type": "string"
-                                },
-                                "predefined_answers": {
-                                  "type": "array",
-                                  "items": {
                                     "type": "object",
                                     "required": [
                                       "id"
@@ -827,7 +1135,87 @@
                                       "id": {
                                         "type": "string"
                                       },
-                                      "text": {
+                                      "question": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  },
+                                  "predefined_answer": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "required": [
+                                        "id"
+                                      ],
+                                      "properties": {
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "text": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "action_type": {
+                                    "type": "object",
+                                    "required": [
+                                      "id"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "action_type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "Guideline",
+                                          "WorkInstruction",
+                                          "AuditQuestion",
+                                          "ProofDocument"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "action": {
+                                    "required": [
+                                      "id"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "stamp": {
+                                        "type": "string"
+                                      },
+                                      "type": {
+                                        "type": "string",
+                                        "enum": [
+                                          "guidelines",
+                                          "work_instruction",
+                                          "audit_question",
+                                          "proof_documents"
+                                        ]
+                                      },
+                                      "audit_question": {
+                                        "type": "string"
+                                      },
+                                      "audit_response": {
+                                        "type": "string"
+                                      },
+                                      "selected_answer_id": {
+                                        "type": "integer"
+                                      },
+                                      "alternative_answer": {
+                                        "type": "string"
+                                      },
+                                      "published_at": {
+                                        "type": "string"
+                                      },
+                                      "created_by": {
+                                        "type": "string"
+                                      },
+                                      "updated_by": {
                                         "type": "string"
                                       }
                                     }

@@ -12,6 +12,11 @@
     "description": {
       "type": "string"
     },
+    "tag": {
+      "type": "component",
+      "repeatable": false,
+      "component": "iso-components.tag"
+    },
     "annex": {
       "type": "component",
       "repeatable": true,

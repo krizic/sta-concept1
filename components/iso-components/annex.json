@@ -13,18 +13,15 @@
     "description": {
       "type": "string"
     },
-    "actions": {
-      "collection": "action"
-    },
-    "audit_question": {
+    "tag": {
       "type": "component",
       "repeatable": false,
-      "component": "action-components.audit-question"
+      "component": "iso-components.tag"
     },
-    "predefined_question": {
+    "action_structure": {
       "type": "component",
-      "repeatable": false,
-      "component": "action-components.predefined-question"
+      "repeatable": true,
+      "component": "action-components.action-structure"
     }
   }
 }

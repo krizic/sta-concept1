@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_action_components_action_structures",
+  "info": {
+    "name": "Action-Structure",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "predefined_question": {
+      "type": "component",
+      "repeatable": false,
+      "component": "action-components.predefined-question"
+    },
+    "predefined_answer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "action-components.predefined-answers"
+    },
+    "action_type": {
+      "type": "component",
+      "repeatable": false,
+      "component": "action-components.action-type"
+    },
+    "action": {
+      "model": "action"
+    }
+  }
+}

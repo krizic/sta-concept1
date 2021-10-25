@@ -25,14 +25,16 @@
       ]
     },
     "audit_question": {
-      "type": "component",
-      "repeatable": false,
-      "component": "action-components.audit-question"
+      "type": "text"
     },
-    "predefined_question": {
-      "type": "component",
-      "repeatable": true,
-      "component": "action-components.predefined-question"
+    "audit_response": {
+      "type": "text"
+    },
+    "selected_answer_id": {
+      "type": "integer"
+    },
+    "alternative_answer": {
+      "type": "text"
     }
   }
 }

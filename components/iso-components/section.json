@@ -13,6 +13,11 @@
     "description": {
       "type": "string"
     },
+    "tag": {
+      "type": "component",
+      "repeatable": false,
+      "component": "iso-components.tag"
+    },
     "subsection": {
       "type": "component",
       "repeatable": true,

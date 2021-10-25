@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/actions": {
+    "/tags": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the tags's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Action"
+                    "$ref": "#/components/schemas/Tags"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Tags"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new tags record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Tags"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Tags"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAction"
+                "$ref": "#/components/schemas/NewTags"
               }
             }
           }
         }
       }
     },
-    "/actions/count": {
+    "/tags/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the number of tags documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Tags"
         ],
         "parameters": []
       }
     },
-    "/actions/{id}": {
+    "/tags/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one tags record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Tags"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Tags"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single tags record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Tags"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Tags"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAction"
+                "$ref": "#/components/schemas/NewTags"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single tags record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single tags based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Tags"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Action": {
+      "Tags": {
         "required": [
           "id"
         ],
@@ -522,28 +522,7 @@
           "id": {
             "type": "string"
           },
-          "stamp": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidelines",
-              "work_instruction",
-              "audit_question",
-              "proof_documents"
-            ]
-          },
-          "audit_question": {
-            "type": "string"
-          },
-          "audit_response": {
-            "type": "string"
-          },
-          "selected_answer_id": {
-            "type": "integer"
-          },
-          "alternative_answer": {
+          "tag_name": {
             "type": "string"
           },
           "published_at": {
@@ -552,30 +531,9 @@
           }
         }
       },
-      "NewAction": {
+      "NewTags": {
         "properties": {
-          "stamp": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidelines",
-              "work_instruction",
-              "audit_question",
-              "proof_documents"
-            ]
-          },
-          "audit_question": {
-            "type": "string"
-          },
-          "audit_response": {
-            "type": "string"
-          },
-          "selected_answer_id": {
-            "type": "integer"
-          },
-          "alternative_answer": {
+          "tag_name": {
             "type": "string"
           },
           "published_at": {
@@ -594,7 +552,7 @@
   },
   "tags": [
     {
-      "name": "Action"
+      "name": "Tags"
     }
   ]
 }

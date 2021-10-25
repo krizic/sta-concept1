@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_iso_components_tags",
+  "info": {
+    "name": "Tag",
+    "icon": "hashtag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "predefined_tag": {
+      "model": "tags"
+    },
+    "assigned_tags": {
+      "collection": "tags"
+    }
+  }
+}

@@ -2,17 +2,13 @@
   "collectionName": "components_action_components_predefined_questions",
   "info": {
     "name": "predefined-question",
-    "icon": "question-circle"
+    "icon": "question-circle",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "question": {
       "type": "text"
-    },
-    "predefined_answers": {
-      "type": "component",
-      "repeatable": true,
-      "component": "action-components.predefined-answers"
     }
   }
 }
