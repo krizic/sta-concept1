@@ -522,7 +522,7 @@
           "id": {
             "type": "string"
           },
-          "tag_name": {
+          "name": {
             "type": "string"
           },
           "published_at": {
@@ -533,7 +533,7 @@
       },
       "NewTags": {
         "properties": {
-          "tag_name": {
+          "name": {
             "type": "string"
           },
           "published_at": {

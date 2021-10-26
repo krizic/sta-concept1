@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/25/2021 5:26:34 PM"
+    "x-generation-date": "10/26/2021 1:40:35 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3911,7 +3911,7 @@
                 "id": {
                   "type": "string"
                 },
-                "section_number": {
+                "enumerator": {
                   "type": "string"
                 },
                 "description": {
@@ -3934,7 +3934,7 @@
                         "id": {
                           "type": "string"
                         },
-                        "tag_name": {
+                        "name": {
                           "type": "string"
                         },
                         "published_at": {
@@ -3958,7 +3958,7 @@
                           "id": {
                             "type": "string"
                           },
-                          "tag_name": {
+                          "name": {
                             "type": "string"
                           },
                           "published_at": {
@@ -3986,7 +3986,7 @@
                       "id": {
                         "type": "string"
                       },
-                      "section_number": {
+                      "enumerator": {
                         "type": "string"
                       },
                       "description": {
@@ -4009,7 +4009,7 @@
                               "id": {
                                 "type": "string"
                               },
-                              "tag_name": {
+                              "name": {
                                 "type": "string"
                               },
                               "published_at": {
@@ -4033,7 +4033,7 @@
                                 "id": {
                                   "type": "string"
                                 },
-                                "tag_name": {
+                                "name": {
                                   "type": "string"
                                 },
                                 "published_at": {
@@ -4061,7 +4061,7 @@
                             "id": {
                               "type": "string"
                             },
-                            "section_number": {
+                            "enumerator": {
                               "type": "string"
                             },
                             "description": {
@@ -4084,7 +4084,7 @@
                                     "id": {
                                       "type": "string"
                                     },
-                                    "tag_name": {
+                                    "name": {
                                       "type": "string"
                                     },
                                     "published_at": {
@@ -4108,7 +4108,7 @@
                                       "id": {
                                         "type": "string"
                                       },
-                                      "tag_name": {
+                                      "name": {
                                         "type": "string"
                                       },
                                       "published_at": {
@@ -4270,7 +4270,7 @@
                 "id": {
                   "type": "string"
                 },
-                "section_number": {
+                "enumerator": {
                   "type": "string"
                 },
                 "description": {
@@ -4293,7 +4293,7 @@
                         "id": {
                           "type": "string"
                         },
-                        "tag_name": {
+                        "name": {
                           "type": "string"
                         },
                         "published_at": {
@@ -4317,7 +4317,7 @@
                           "id": {
                             "type": "string"
                           },
-                          "tag_name": {
+                          "name": {
                             "type": "string"
                           },
                           "published_at": {
@@ -4345,7 +4345,7 @@
                       "id": {
                         "type": "string"
                       },
-                      "section_number": {
+                      "enumerator": {
                         "type": "string"
                       },
                       "description": {
@@ -4368,7 +4368,7 @@
                               "id": {
                                 "type": "string"
                               },
-                              "tag_name": {
+                              "name": {
                                 "type": "string"
                               },
                               "published_at": {
@@ -4392,7 +4392,7 @@
                                 "id": {
                                   "type": "string"
                                 },
-                                "tag_name": {
+                                "name": {
                                   "type": "string"
                                 },
                                 "published_at": {
@@ -4420,7 +4420,7 @@
                             "id": {
                               "type": "string"
                             },
-                            "section_number": {
+                            "enumerator": {
                               "type": "string"
                             },
                             "description": {
@@ -4443,7 +4443,7 @@
                                     "id": {
                                       "type": "string"
                                     },
-                                    "tag_name": {
+                                    "name": {
                                       "type": "string"
                                     },
                                     "published_at": {
@@ -4467,7 +4467,7 @@
                                       "id": {
                                         "type": "string"
                                       },
-                                      "tag_name": {
+                                      "name": {
                                         "type": "string"
                                       },
                                       "published_at": {
@@ -4621,7 +4621,7 @@
           "id": {
             "type": "string"
           },
-          "tag_name": {
+          "name": {
             "type": "string"
           },
           "published_at": {
@@ -4632,7 +4632,7 @@
       },
       "NewTags": {
         "properties": {
-          "tag_name": {
+          "name": {
             "type": "string"
           },
           "published_at": {

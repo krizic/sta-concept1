@@ -542,7 +542,7 @@
                 "id": {
                   "type": "string"
                 },
-                "section_number": {
+                "enumerator": {
                   "type": "string"
                 },
                 "description": {
@@ -565,7 +565,7 @@
                         "id": {
                           "type": "string"
                         },
-                        "tag_name": {
+                        "name": {
                           "type": "string"
                         },
                         "published_at": {
@@ -589,7 +589,7 @@
                           "id": {
                             "type": "string"
                           },
-                          "tag_name": {
+                          "name": {
                             "type": "string"
                           },
                           "published_at": {
@@ -617,7 +617,7 @@
                       "id": {
                         "type": "string"
                       },
-                      "section_number": {
+                      "enumerator": {
                         "type": "string"
                       },
                       "description": {
@@ -640,7 +640,7 @@
                               "id": {
                                 "type": "string"
                               },
-                              "tag_name": {
+                              "name": {
                                 "type": "string"
                               },
                               "published_at": {
@@ -664,7 +664,7 @@
                                 "id": {
                                   "type": "string"
                                 },
-                                "tag_name": {
+                                "name": {
                                   "type": "string"
                                 },
                                 "published_at": {
@@ -692,7 +692,7 @@
                             "id": {
                               "type": "string"
                             },
-                            "section_number": {
+                            "enumerator": {
                               "type": "string"
                             },
                             "description": {
@@ -715,7 +715,7 @@
                                     "id": {
                                       "type": "string"
                                     },
-                                    "tag_name": {
+                                    "name": {
                                       "type": "string"
                                     },
                                     "published_at": {
@@ -739,7 +739,7 @@
                                       "id": {
                                         "type": "string"
                                       },
-                                      "tag_name": {
+                                      "name": {
                                         "type": "string"
                                       },
                                       "published_at": {
@@ -901,7 +901,7 @@
                 "id": {
                   "type": "string"
                 },
-                "section_number": {
+                "enumerator": {
                   "type": "string"
                 },
                 "description": {
@@ -924,7 +924,7 @@
                         "id": {
                           "type": "string"
                         },
-                        "tag_name": {
+                        "name": {
                           "type": "string"
                         },
                         "published_at": {
@@ -948,7 +948,7 @@
                           "id": {
                             "type": "string"
                           },
-                          "tag_name": {
+                          "name": {
                             "type": "string"
                           },
                           "published_at": {
@@ -976,7 +976,7 @@
                       "id": {
                         "type": "string"
                       },
-                      "section_number": {
+                      "enumerator": {
                         "type": "string"
                       },
                       "description": {
@@ -999,7 +999,7 @@
                               "id": {
                                 "type": "string"
                               },
-                              "tag_name": {
+                              "name": {
                                 "type": "string"
                               },
                               "published_at": {
@@ -1023,7 +1023,7 @@
                                 "id": {
                                   "type": "string"
                                 },
-                                "tag_name": {
+                                "name": {
                                   "type": "string"
                                 },
                                 "published_at": {
@@ -1051,7 +1051,7 @@
                             "id": {
                               "type": "string"
                             },
-                            "section_number": {
+                            "enumerator": {
                               "type": "string"
                             },
                             "description": {
@@ -1074,7 +1074,7 @@
                                     "id": {
                                       "type": "string"
                                     },
-                                    "tag_name": {
+                                    "name": {
                                       "type": "string"
                                     },
                                     "published_at": {
@@ -1098,7 +1098,7 @@
                                       "id": {
                                         "type": "string"
                                       },
-                                      "tag_name": {
+                                      "name": {
                                         "type": "string"
                                       },
                                       "published_at": {

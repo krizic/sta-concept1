@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "section_number": {
+    "enumerator": {
       "type": "string"
     },
     "description": {
