@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/actions": {
+    "/auditors": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Action"
+                    "$ref": "#/components/schemas/Auditor"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Auditor"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Auditor"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Auditor"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAction"
+                "$ref": "#/components/schemas/NewAuditor"
               }
             }
           }
         }
       }
     },
-    "/actions/count": {
+    "/auditors/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Auditor"
         ],
         "parameters": []
       }
     },
-    "/actions/{id}": {
+    "/auditors/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Auditor"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Auditor"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Auditor"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Auditor"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAction"
+                "$ref": "#/components/schemas/NewAuditor"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Auditor"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Action": {
+      "Auditor": {
         "required": [
           "id"
         ],
@@ -522,96 +522,14 @@
           "id": {
             "type": "string"
           },
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidelines",
-              "work_instruction",
-              "audit_question",
-              "proof_documents"
-            ]
-          },
-          "audit_question": {
+          "name": {
             "type": "string"
           },
-          "audit_response": {
+          "city": {
             "type": "string"
           },
-          "selected_answer_id": {
-            "type": "integer"
-          },
-          "alternative_answer": {
+          "region": {
             "type": "string"
-          },
-          "files": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "published_at": {
             "type": "string",
@@ -619,27 +537,15 @@
           }
         }
       },
-      "NewAction": {
+      "NewAuditor": {
         "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidelines",
-              "work_instruction",
-              "audit_question",
-              "proof_documents"
-            ]
-          },
-          "audit_question": {
+          "name": {
             "type": "string"
           },
-          "audit_response": {
+          "city": {
             "type": "string"
           },
-          "selected_answer_id": {
-            "type": "integer"
-          },
-          "alternative_answer": {
+          "region": {
             "type": "string"
           },
           "published_at": {
@@ -658,7 +564,7 @@
   },
   "tags": [
     {
-      "name": "Action"
+      "name": "Auditor"
     }
   ]
 }

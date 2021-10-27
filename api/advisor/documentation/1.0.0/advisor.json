@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/actions": {
+    "/advisors": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Action"
+                    "$ref": "#/components/schemas/Advisor"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Advisor"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Advisor"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Advisor"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAction"
+                "$ref": "#/components/schemas/NewAdvisor"
               }
             }
           }
         }
       }
     },
-    "/actions/count": {
+    "/advisors/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Advisor"
         ],
         "parameters": []
       }
     },
-    "/actions/{id}": {
+    "/advisors/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Advisor"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Advisor"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Action"
+                  "$ref": "#/components/schemas/Advisor"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Advisor"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAction"
+                "$ref": "#/components/schemas/NewAdvisor"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "Advisor"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Action": {
+      "Advisor": {
         "required": [
           "id"
         ],
@@ -522,28 +522,25 @@
           "id": {
             "type": "string"
           },
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidelines",
-              "work_instruction",
-              "audit_question",
-              "proof_documents"
-            ]
-          },
-          "audit_question": {
+          "name": {
             "type": "string"
           },
-          "audit_response": {
+          "languages": {
             "type": "string"
           },
-          "selected_answer_id": {
-            "type": "integer"
-          },
-          "alternative_answer": {
+          "iso": {
             "type": "string"
           },
-          "files": {
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "avatar": {
             "type": "array",
             "items": {
               "required": [
@@ -619,27 +616,24 @@
           }
         }
       },
-      "NewAction": {
+      "NewAdvisor": {
         "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidelines",
-              "work_instruction",
-              "audit_question",
-              "proof_documents"
-            ]
-          },
-          "audit_question": {
+          "name": {
             "type": "string"
           },
-          "audit_response": {
+          "languages": {
             "type": "string"
           },
-          "selected_answer_id": {
-            "type": "integer"
+          "iso": {
+            "type": "string"
           },
-          "alternative_answer": {
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "location": {
             "type": "string"
           },
           "published_at": {
@@ -658,7 +652,7 @@
   },
   "tags": [
     {
-      "name": "Action"
+      "name": "Advisor"
     }
   ]
 }

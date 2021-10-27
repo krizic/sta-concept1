@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "stamp": {
-      "type": "time"
-    },
     "type": {
       "type": "enumeration",
       "enum": [
@@ -35,6 +32,18 @@
     },
     "alternative_answer": {
       "type": "richtext"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

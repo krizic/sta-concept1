@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_footer_components_footer_items",
+  "info": {
+    "name": "Footer-Item",
+    "icon": "hand-point-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "order": {
+      "default": 0,
+      "type": "integer"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

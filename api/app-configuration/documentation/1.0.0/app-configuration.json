@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/actions": {
+    "/app-configuration": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the app-configuration's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve app-configuration document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Action"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "App-configuration"
         ],
         "parameters": [
           {
@@ -192,81 +193,18 @@
           }
         ]
       },
-      "post": {
+      "put": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Update a single app-configuration record",
         "responses": {
           "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Action"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Action"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewAction"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/actions/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
+            "description": "Retrieve app-configuration document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,122 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Action"
-        ],
-        "parameters": []
-      }
-    },
-    "/actions/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Action"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Action"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Action"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Action"
+          "App-configuration"
         ],
         "requestBody": {
           "description": "",
@@ -429,30 +252,19 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAction"
+                "$ref": "#/components/schemas/NewApp-configuration"
               }
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single app-configuration record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single app-configuration based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,26 +307,15 @@
         },
         "summary": "",
         "tags": [
-          "Action"
+          "App-configuration"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       }
     }
   },
   "components": {
     "schemas": {
-      "Action": {
+      "App-configuration": {
         "required": [
           "id"
         ],
@@ -522,92 +323,25 @@
           "id": {
             "type": "string"
           },
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidelines",
-              "work_instruction",
-              "audit_question",
-              "proof_documents"
-            ]
-          },
-          "audit_question": {
-            "type": "string"
-          },
-          "audit_response": {
-            "type": "string"
-          },
-          "selected_answer_id": {
-            "type": "integer"
-          },
-          "alternative_answer": {
-            "type": "string"
-          },
-          "files": {
+          "global_buttons": {
             "type": "array",
             "items": {
+              "type": "object",
               "required": [
                 "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
+                "key"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "name": {
+                "text": {
                   "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
                 },
                 "url": {
                   "type": "string"
                 },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+                "key": {
                   "type": "string"
                 }
               }
@@ -619,28 +353,31 @@
           }
         }
       },
-      "NewAction": {
+      "NewApp-configuration": {
         "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidelines",
-              "work_instruction",
-              "audit_question",
-              "proof_documents"
-            ]
-          },
-          "audit_question": {
-            "type": "string"
-          },
-          "audit_response": {
-            "type": "string"
-          },
-          "selected_answer_id": {
-            "type": "integer"
-          },
-          "alternative_answer": {
-            "type": "string"
+          "global_buttons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "key"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "key": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -656,9 +393,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Action"
-    }
-  ]
+  "tags": []
 }

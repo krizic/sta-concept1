@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/auditors",
+      "handler": "auditor.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/auditors/count",
+      "handler": "auditor.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/auditors/:id",
+      "handler": "auditor.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/auditors",
+      "handler": "auditor.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/auditors/:id",
+      "handler": "auditor.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/auditors/:id",
+      "handler": "auditor.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
