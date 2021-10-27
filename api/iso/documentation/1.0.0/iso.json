@@ -531,34 +531,6 @@
           "enabled": {
             "type": "boolean"
           },
-          "available_tags": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "iso": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "section": {
             "type": "array",
             "items": {
@@ -599,7 +571,13 @@
                         "name": {
                           "type": "string"
                         },
-                        "iso": {
+                        "isos": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "description": {
                           "type": "string"
                         },
                         "published_at": {
@@ -780,7 +758,13 @@
                               "name": {
                                 "type": "string"
                               },
-                              "iso": {
+                              "isos": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              },
+                              "description": {
                                 "type": "string"
                               },
                               "published_at": {
@@ -961,7 +945,13 @@
                                     "name": {
                                       "type": "string"
                                     },
-                                    "iso": {
+                                    "isos": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "description": {
                                       "type": "string"
                                     },
                                     "published_at": {
@@ -1107,6 +1097,40 @@
                       }
                     }
                   }
+                }
+              }
+            }
+          },
+          "available_tags": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "isos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "description": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
@@ -1128,12 +1152,6 @@
           "enabled": {
             "type": "boolean"
           },
-          "available_tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "section": {
             "type": "array",
             "items": {
@@ -1174,7 +1192,13 @@
                         "name": {
                           "type": "string"
                         },
-                        "iso": {
+                        "isos": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "description": {
                           "type": "string"
                         },
                         "published_at": {
@@ -1355,7 +1379,13 @@
                               "name": {
                                 "type": "string"
                               },
-                              "iso": {
+                              "isos": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              },
+                              "description": {
                                 "type": "string"
                               },
                               "published_at": {
@@ -1536,7 +1566,13 @@
                                     "name": {
                                       "type": "string"
                                     },
-                                    "iso": {
+                                    "isos": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "description": {
                                       "type": "string"
                                     },
                                     "published_at": {
@@ -1684,6 +1720,12 @@
                   }
                 }
               }
+            }
+          },
+          "available_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
           "published_at": {

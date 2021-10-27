@@ -21,14 +21,14 @@
     "enabled": {
       "type": "boolean"
     },
-    "available_tags": {
-      "collection": "tags",
-      "via": "iso"
-    },
     "section": {
       "type": "component",
       "repeatable": true,
       "component": "iso-components.lvl1"
+    },
+    "available_tags": {
+      "via": "isos",
+      "collection": "tags"
     }
   }
 }

@@ -15,9 +15,13 @@
     "name": {
       "type": "string"
     },
-    "iso": {
+    "isos": {
+      "collection": "iso",
       "via": "available_tags",
-      "model": "iso"
+      "dominant": true
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
