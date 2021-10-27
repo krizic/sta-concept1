@@ -9,9 +9,6 @@
   "attributes": {
     "predefined_tag": {
       "model": "tags"
-    },
-    "assigned_tags": {
-      "collection": "tags"
     }
   }
 }

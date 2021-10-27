@@ -1,7 +1,7 @@
 {
   "collectionName": "components_action_components_action_structures",
   "info": {
-    "name": "Action-Structure",
+    "name": "Action-Template",
     "icon": "archway",
     "description": ""
   },
@@ -21,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "action-components.action-type"
+    },
+    "audit_placeholders": {
+      "type": "component",
+      "repeatable": false,
+      "component": "action-components.audit-placeholders"
     },
     "action": {
       "model": "action"

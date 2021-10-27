@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_action_components_audit_placeholders",
+  "info": {
+    "name": "Audit-Placeholders",
+    "icon": "water"
+  },
+  "options": {},
+  "attributes": {
+    "question_placeholder": {
+      "type": "text"
+    },
+    "answer_placeholder": {
+      "type": "text"
+    }
+  }
+}

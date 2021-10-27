@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_iso_component_sections",
+  "collectionName": "components_iso_component_lvl3",
   "info": {
-    "name": "section",
-    "icon": "bars",
+    "name": "lvl3",
+    "icon": "align-left",
     "description": ""
   },
   "options": {},
@@ -10,7 +10,10 @@
     "enumerator": {
       "type": "string"
     },
-    "description": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
       "type": "string"
     },
     "tag": {
@@ -18,10 +21,10 @@
       "repeatable": false,
       "component": "iso-components.tag"
     },
-    "subsection": {
+    "action_structure": {
       "type": "component",
       "repeatable": true,
-      "component": "iso-components.subsection"
+      "component": "action-components.action-structure"
     }
   }
 }

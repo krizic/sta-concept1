@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/26/2021 1:40:35 PM"
+    "x-generation-date": "10/27/2021 12:13:23 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3894,11 +3894,39 @@
           "ui_code": {
             "type": "string"
           },
-          "description": {
+          "name": {
             "type": "string"
           },
           "enabled": {
             "type": "boolean"
+          },
+          "available_tags": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "iso": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           },
           "section": {
             "type": "array",
@@ -3914,7 +3942,10 @@
                 "enumerator": {
                   "type": "string"
                 },
-                "description": {
+                "title": {
+                  "type": "string"
+                },
+                "text": {
                   "type": "string"
                 },
                 "tag": {
@@ -3937,6 +3968,9 @@
                         "name": {
                           "type": "string"
                         },
+                        "iso": {
+                          "type": "string"
+                        },
                         "published_at": {
                           "type": "string"
                         },
@@ -3947,10 +3981,22 @@
                           "type": "string"
                         }
                       }
-                    },
-                    "assigned_tags": {
-                      "type": "array",
-                      "items": {
+                    }
+                  }
+                },
+                "action_structure": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "predefined_question": {
+                        "type": "object",
                         "required": [
                           "id"
                         ],
@@ -3958,7 +4004,95 @@
                           "id": {
                             "type": "string"
                           },
-                          "name": {
+                          "question": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "predefined_answer": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "id"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "text": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "action_type": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "action_type": {
+                            "type": "string",
+                            "enum": [
+                              "Guideline",
+                              "WorkInstruction",
+                              "AuditQuestion",
+                              "ProofDocument"
+                            ]
+                          }
+                        }
+                      },
+                      "audit_placeholders": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "question_placeholder": {
+                            "type": "string"
+                          },
+                          "answer_placeholder": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "action": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "stamp": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "guidelines",
+                              "work_instruction",
+                              "audit_question",
+                              "proof_documents"
+                            ]
+                          },
+                          "audit_question": {
+                            "type": "string"
+                          },
+                          "audit_response": {
+                            "type": "string"
+                          },
+                          "selected_answer_id": {
+                            "type": "integer"
+                          },
+                          "alternative_answer": {
                             "type": "string"
                           },
                           "published_at": {
@@ -3975,7 +4109,7 @@
                     }
                   }
                 },
-                "subsection": {
+                "lvl2": {
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -3989,7 +4123,10 @@
                       "enumerator": {
                         "type": "string"
                       },
-                      "description": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "text": {
                         "type": "string"
                       },
                       "tag": {
@@ -4012,6 +4149,9 @@
                               "name": {
                                 "type": "string"
                               },
+                              "iso": {
+                                "type": "string"
+                              },
                               "published_at": {
                                 "type": "string"
                               },
@@ -4022,10 +4162,22 @@
                                 "type": "string"
                               }
                             }
-                          },
-                          "assigned_tags": {
-                            "type": "array",
-                            "items": {
+                          }
+                        }
+                      },
+                      "action_structure": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "id"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "predefined_question": {
+                              "type": "object",
                               "required": [
                                 "id"
                               ],
@@ -4033,7 +4185,95 @@
                                 "id": {
                                   "type": "string"
                                 },
-                                "name": {
+                                "question": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "predefined_answer": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "required": [
+                                  "id"
+                                ],
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "text": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "action_type": {
+                              "type": "object",
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "action_type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "Guideline",
+                                    "WorkInstruction",
+                                    "AuditQuestion",
+                                    "ProofDocument"
+                                  ]
+                                }
+                              }
+                            },
+                            "audit_placeholders": {
+                              "type": "object",
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "question_placeholder": {
+                                  "type": "string"
+                                },
+                                "answer_placeholder": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "action": {
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "stamp": {
+                                  "type": "string"
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "guidelines",
+                                    "work_instruction",
+                                    "audit_question",
+                                    "proof_documents"
+                                  ]
+                                },
+                                "audit_question": {
+                                  "type": "string"
+                                },
+                                "audit_response": {
+                                  "type": "string"
+                                },
+                                "selected_answer_id": {
+                                  "type": "integer"
+                                },
+                                "alternative_answer": {
                                   "type": "string"
                                 },
                                 "published_at": {
@@ -4050,7 +4290,7 @@
                           }
                         }
                       },
-                      "annex": {
+                      "lvl3": {
                         "type": "array",
                         "items": {
                           "type": "object",
@@ -4064,7 +4304,10 @@
                             "enumerator": {
                               "type": "string"
                             },
-                            "description": {
+                            "title": {
+                              "type": "string"
+                            },
+                            "text": {
                               "type": "string"
                             },
                             "tag": {
@@ -4087,6 +4330,9 @@
                                     "name": {
                                       "type": "string"
                                     },
+                                    "iso": {
+                                      "type": "string"
+                                    },
                                     "published_at": {
                                       "type": "string"
                                     },
@@ -4095,31 +4341,6 @@
                                     },
                                     "updated_by": {
                                       "type": "string"
-                                    }
-                                  }
-                                },
-                                "assigned_tags": {
-                                  "type": "array",
-                                  "items": {
-                                    "required": [
-                                      "id"
-                                    ],
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "name": {
-                                        "type": "string"
-                                      },
-                                      "published_at": {
-                                        "type": "string"
-                                      },
-                                      "created_by": {
-                                        "type": "string"
-                                      },
-                                      "updated_by": {
-                                        "type": "string"
-                                      }
                                     }
                                   }
                                 }
@@ -4184,6 +4405,23 @@
                                           "AuditQuestion",
                                           "ProofDocument"
                                         ]
+                                      }
+                                    }
+                                  },
+                                  "audit_placeholders": {
+                                    "type": "object",
+                                    "required": [
+                                      "id"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "question_placeholder": {
+                                        "type": "string"
+                                      },
+                                      "answer_placeholder": {
+                                        "type": "string"
                                       }
                                     }
                                   },
@@ -4253,11 +4491,17 @@
           "ui_code": {
             "type": "string"
           },
-          "description": {
+          "name": {
             "type": "string"
           },
           "enabled": {
             "type": "boolean"
+          },
+          "available_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "section": {
             "type": "array",
@@ -4273,7 +4517,10 @@
                 "enumerator": {
                   "type": "string"
                 },
-                "description": {
+                "title": {
+                  "type": "string"
+                },
+                "text": {
                   "type": "string"
                 },
                 "tag": {
@@ -4296,6 +4543,9 @@
                         "name": {
                           "type": "string"
                         },
+                        "iso": {
+                          "type": "string"
+                        },
                         "published_at": {
                           "type": "string"
                         },
@@ -4306,10 +4556,22 @@
                           "type": "string"
                         }
                       }
-                    },
-                    "assigned_tags": {
-                      "type": "array",
-                      "items": {
+                    }
+                  }
+                },
+                "action_structure": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "predefined_question": {
+                        "type": "object",
                         "required": [
                           "id"
                         ],
@@ -4317,7 +4579,95 @@
                           "id": {
                             "type": "string"
                           },
-                          "name": {
+                          "question": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "predefined_answer": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "id"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "text": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "action_type": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "action_type": {
+                            "type": "string",
+                            "enum": [
+                              "Guideline",
+                              "WorkInstruction",
+                              "AuditQuestion",
+                              "ProofDocument"
+                            ]
+                          }
+                        }
+                      },
+                      "audit_placeholders": {
+                        "type": "object",
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "question_placeholder": {
+                            "type": "string"
+                          },
+                          "answer_placeholder": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "action": {
+                        "required": [
+                          "id"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "stamp": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "guidelines",
+                              "work_instruction",
+                              "audit_question",
+                              "proof_documents"
+                            ]
+                          },
+                          "audit_question": {
+                            "type": "string"
+                          },
+                          "audit_response": {
+                            "type": "string"
+                          },
+                          "selected_answer_id": {
+                            "type": "integer"
+                          },
+                          "alternative_answer": {
                             "type": "string"
                           },
                           "published_at": {
@@ -4334,7 +4684,7 @@
                     }
                   }
                 },
-                "subsection": {
+                "lvl2": {
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -4348,7 +4698,10 @@
                       "enumerator": {
                         "type": "string"
                       },
-                      "description": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "text": {
                         "type": "string"
                       },
                       "tag": {
@@ -4371,6 +4724,9 @@
                               "name": {
                                 "type": "string"
                               },
+                              "iso": {
+                                "type": "string"
+                              },
                               "published_at": {
                                 "type": "string"
                               },
@@ -4381,10 +4737,22 @@
                                 "type": "string"
                               }
                             }
-                          },
-                          "assigned_tags": {
-                            "type": "array",
-                            "items": {
+                          }
+                        }
+                      },
+                      "action_structure": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "id"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "predefined_question": {
+                              "type": "object",
                               "required": [
                                 "id"
                               ],
@@ -4392,7 +4760,95 @@
                                 "id": {
                                   "type": "string"
                                 },
-                                "name": {
+                                "question": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "predefined_answer": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "required": [
+                                  "id"
+                                ],
+                                "properties": {
+                                  "id": {
+                                    "type": "string"
+                                  },
+                                  "text": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "action_type": {
+                              "type": "object",
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "action_type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "Guideline",
+                                    "WorkInstruction",
+                                    "AuditQuestion",
+                                    "ProofDocument"
+                                  ]
+                                }
+                              }
+                            },
+                            "audit_placeholders": {
+                              "type": "object",
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "question_placeholder": {
+                                  "type": "string"
+                                },
+                                "answer_placeholder": {
+                                  "type": "string"
+                                }
+                              }
+                            },
+                            "action": {
+                              "required": [
+                                "id"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "type": "string"
+                                },
+                                "stamp": {
+                                  "type": "string"
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "guidelines",
+                                    "work_instruction",
+                                    "audit_question",
+                                    "proof_documents"
+                                  ]
+                                },
+                                "audit_question": {
+                                  "type": "string"
+                                },
+                                "audit_response": {
+                                  "type": "string"
+                                },
+                                "selected_answer_id": {
+                                  "type": "integer"
+                                },
+                                "alternative_answer": {
                                   "type": "string"
                                 },
                                 "published_at": {
@@ -4409,7 +4865,7 @@
                           }
                         }
                       },
-                      "annex": {
+                      "lvl3": {
                         "type": "array",
                         "items": {
                           "type": "object",
@@ -4423,7 +4879,10 @@
                             "enumerator": {
                               "type": "string"
                             },
-                            "description": {
+                            "title": {
+                              "type": "string"
+                            },
+                            "text": {
                               "type": "string"
                             },
                             "tag": {
@@ -4446,6 +4905,9 @@
                                     "name": {
                                       "type": "string"
                                     },
+                                    "iso": {
+                                      "type": "string"
+                                    },
                                     "published_at": {
                                       "type": "string"
                                     },
@@ -4454,31 +4916,6 @@
                                     },
                                     "updated_by": {
                                       "type": "string"
-                                    }
-                                  }
-                                },
-                                "assigned_tags": {
-                                  "type": "array",
-                                  "items": {
-                                    "required": [
-                                      "id"
-                                    ],
-                                    "properties": {
-                                      "id": {
-                                        "type": "string"
-                                      },
-                                      "name": {
-                                        "type": "string"
-                                      },
-                                      "published_at": {
-                                        "type": "string"
-                                      },
-                                      "created_by": {
-                                        "type": "string"
-                                      },
-                                      "updated_by": {
-                                        "type": "string"
-                                      }
                                     }
                                   }
                                 }
@@ -4543,6 +4980,23 @@
                                           "AuditQuestion",
                                           "ProofDocument"
                                         ]
+                                      }
+                                    }
+                                  },
+                                  "audit_placeholders": {
+                                    "type": "object",
+                                    "required": [
+                                      "id"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "question_placeholder": {
+                                        "type": "string"
+                                      },
+                                      "answer_placeholder": {
+                                        "type": "string"
                                       }
                                     }
                                   },
@@ -4624,6 +5078,43 @@
           "name": {
             "type": "string"
           },
+          "iso": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "ui_code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "available_tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "section": {
+                "type": "component"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -4633,6 +5124,9 @@
       "NewTags": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "iso": {
             "type": "string"
           },
           "published_at": {

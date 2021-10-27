@@ -1,16 +1,18 @@
 {
-  "collectionName": "components_iso_component_annexes",
+  "collectionName": "components_iso_component_lvl2",
   "info": {
-    "name": "Annex",
-    "icon": "align-left",
-    "description": ""
+    "name": "lvl2",
+    "icon": "align-justify"
   },
   "options": {},
   "attributes": {
     "enumerator": {
       "type": "string"
     },
-    "description": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
       "type": "string"
     },
     "tag": {
@@ -22,6 +24,11 @@
       "type": "component",
       "repeatable": true,
       "component": "action-components.action-structure"
+    },
+    "lvl3": {
+      "type": "component",
+      "repeatable": true,
+      "component": "iso-components.lvl3"
     }
   }
 }

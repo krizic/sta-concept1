@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "isos",
   "info": {
-    "name": "ISO"
+    "name": "ISO",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -14,16 +15,20 @@
     "ui_code": {
       "type": "string"
     },
-    "description": {
+    "name": {
       "type": "string"
     },
     "enabled": {
       "type": "boolean"
     },
+    "available_tags": {
+      "collection": "tags",
+      "via": "iso"
+    },
     "section": {
       "type": "component",
       "repeatable": true,
-      "component": "iso-components.section"
+      "component": "iso-components.lvl1"
     }
   }
 }

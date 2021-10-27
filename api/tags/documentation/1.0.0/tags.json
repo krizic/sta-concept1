@@ -525,6 +525,43 @@
           "name": {
             "type": "string"
           },
+          "iso": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "ui_code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "available_tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "section": {
+                "type": "component"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -534,6 +571,9 @@
       "NewTags": {
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "iso": {
             "type": "string"
           },
           "published_at": {

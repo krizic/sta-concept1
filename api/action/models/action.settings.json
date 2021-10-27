@@ -34,7 +34,7 @@
       "type": "integer"
     },
     "alternative_answer": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }
